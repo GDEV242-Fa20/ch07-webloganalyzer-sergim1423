@@ -79,6 +79,28 @@ public int numberOfAccesses()
     }
     
     /**
+     * Busiest hour method
+     */
+    public int busiestHour()
+    {
+        //creating variables maxHour, holds value of hour in
+        //max day
+        int maxHour = 0;
+        for(int hour = 1; hour<hourCounts.length;hour++)
+        {
+            //compare values of hourCounts particular hour
+            //to hour with max count
+            if(hourCounts[hour]>hourCounts[maxHour])
+            {
+                maxHour=hour;
+            }
+        }
+        
+        return maxHour;
+    }
+
+    
+    /**
      * Print the lines of data read by the LogfileReader
      */
     public void printData()
