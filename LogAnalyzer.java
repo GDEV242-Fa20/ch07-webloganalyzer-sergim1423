@@ -22,7 +22,20 @@ public class LogAnalyzer
         // Create the reader to obtain the data.
         reader = new LogfileReader(fileName);
     }
-
+    
+/**
+ * Return number of accesses
+ * Exercise 7.14
+ */ 
+public int numberOfAccesses()
+{
+    int total = 0;
+    for(int hour=0;hour<hourCounts.length; hour++){
+        total +=hourCounts[hour];
+    }
+    return total;
+}
+    
     /**
      * Analyze the hourly access data from the log file.
      */
