@@ -98,6 +98,20 @@ public int numberOfAccesses()
         
         return maxHour;
     }
+    int busiestHour(int[]hourCounts)
+    {
+        int busiestOne=0;
+        int busiestTwo=0;
+        for(int n:hourCounts){
+            if(busiestOne<n){
+                busiestTwo=busiestOne;
+                busiestOne=n;
+            }else if (busiestTwo<n){
+                busiestTwo=n;
+            }
+        }
+        return busiestOne; //return value of first hour
+    }
 
     /**
      * Quietest hour method
