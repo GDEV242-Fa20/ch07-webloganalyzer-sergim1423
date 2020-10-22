@@ -99,6 +99,23 @@ public int numberOfAccesses()
         return maxHour;
     }
 
+    /**
+     * Quietest hour method
+     */
+    public int quietestHour()
+    {
+        int quietestHour(int[]hourCounts)
+        {
+            int quietest=hourCounts[0];
+            for(int i=0; i<hourCounts.length;i++)
+            {
+                if(hourCounts[i]> 0 &&
+                hourCounts[i]>quietest)
+                quietest=hourCounts[i];
+            }
+            return quietest; //quietest element is returning here
+        }
+        
     
     /**
      * Print the lines of data read by the LogfileReader
