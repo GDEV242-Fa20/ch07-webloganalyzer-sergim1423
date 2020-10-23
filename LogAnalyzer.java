@@ -18,7 +18,7 @@ public class LogAnalyzer
     public static void main(String[]args)
     {
         //creation of object LogAnalyzer
-        LogAnalyzer analyze = new LogAnalyzer();
+        LogAnalyzer analyze = new LogAnalyzer("String Analyze");
         //analyzing log from file
         analyze.analyzeHourlyData();
         //print number of accesses
@@ -118,8 +118,6 @@ public int numberOfAccesses()
      */
     public int quietestHour()
     {
-        int quietestHour(int[]hourCounts)
-        {
             int quietest=hourCounts[0];
             for(int i=0; i<hourCounts.length;i++)
             {
@@ -129,13 +127,14 @@ public int numberOfAccesses()
             }
             return quietest; //quietest element is returning here
         }
-        
-    
-    /**
+            /**
      * Print the lines of data read by the LogfileReader
      */
     public void printData()
     {
         reader.printData();
     }
+    
 }
+
+
